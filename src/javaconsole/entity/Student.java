@@ -14,11 +14,6 @@ public class Student {
     private long id;
     private String name;
     private String email;
-    private String birthday;
-    private String phone;
-    private String address;
-    private String rollNumber;
-    private String className;
 
     public Student() {
     }
@@ -45,46 +40,6 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getRollNumber() {
-        return rollNumber;
-    }
-
-    public void setRollNumber(String rollNumber) {
-        this.rollNumber = rollNumber;
-    }
-
-    public String getClassName() {
-        return className;
-    }
-
-    public void setClassName(String className) {
-        this.className = className;
     }
 
 }

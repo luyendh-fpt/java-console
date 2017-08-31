@@ -31,40 +31,39 @@ public class MenuConsole {
             Scanner scanner = new Scanner(System.in);
             // Yêu cầu người dùng nhập chuỗi ký tự, gán giá trị người dùng nhập vào
             // ra biến kiểu  chuỗi tên là strChoice.
-            String strChoice = scanner.nextLine();
-            System.out.println(strChoice);
+            String strChoice = scanner.nextLine();            
             // Kiểm tra dữ liệu người dùng nhập vào có là số hay không ?
             // Trong trường hợp không phải là số thì thông báo cho người dùng và bắt đầu lại vòng lặp.
             int choice = 0;
             try {
                 // Ép kiểu của biến strChoice về int.
-                choice = Integer.parseInt(strChoice);
-                System.out.println("Choice: " + choice);
+                choice = Integer.parseInt(strChoice);                
             } catch (java.lang.NumberFormatException e) {
                 // Cần có phần lưu log lỗi ở đây.
                 System.err.println("Please enter a number.");
                 continue;
             }
 
+            StudentController studentController = new StudentController();
             if (choice == 5) {
                 break;
             } else {
                 switch (choice) {
                     case 1:
                         // Do something. Please do something.
-                        System.out.println("Print list of student.");
+                        studentController.getList();
                         break;
                     case 2:
                         // Do something. Please do something.
-                        System.out.println("Add new student.");
+                        studentController.addStudent();
                         break;
                     case 3:
                         // Do something. Please do something.
-                        System.out.println("Edit student.");
+                        studentController.editStudent();
                         break;
                     case 4:
                         // Do something. Please do something.
-                        System.out.println("Delete student.");
+                        studentController.deleteStudent();
                         break;
                     default:
                         // Do something. Please do something.
